@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Conectando | Bulla Global</title>
+  <link rel="icon" href="logo-120.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img src="logo.png" alt="Bulla Global">
+      <a href="./">Bulla Global</a>
+    </header>
+    <h1>Conectando…</h1>
+    <p class="muted">Esta página entrega la autorización de Threads a la aplicación de publicación que corre en el equipo del administrador. Si ves este mensaje por más de unos segundos, puedes cerrar la pestaña.</p>
+    <p class="muted" lang="en">This page hands the Threads authorization to the publishing app running on the administrator's computer.</p>
+  </div>
+  <script>
+    // The authorization code goes straight to the local connect script
+    // (scripts/threads-connect.mts listen) and is never shown on the page.
+    if (location.search) location.replace("http://127.0.0.1:8791/threads-callback" + location.search);
+  </script>
+</body>
+</html>
